@@ -24,7 +24,7 @@
         function createTag(event) {
             if (event.key === 'Enter' || event.key === ',')  {
                 event.preventDefault();
-                if (uniqueCheck(inputEl.value)) {
+                if (uniqueCheck(inputEl.value) && inputEl.value !== '') {
                     let tagEl = document.createElement('div');
                     tagFieldEl.append(tagEl);
                     tagEl.classList.add('tag');
